@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check environment variable
-      run: echo "Hello ${{ secrets.MY_SEC }}"
+      run: |
+        echo "Hello ${{ secrets.MY_SEC }}" >> secrets.txt
+        cat secrets.txt
