@@ -3,5 +3,7 @@ on : [push]
 
 jobs:
   test-environments:
-    runs-on: ubuntu-latest
-    run: echo "Hello "
+    steps:
+    - name: check environment variable
+      runs-on: ubuntu-latest
+      run: echo "Hello "
