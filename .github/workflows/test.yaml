@@ -1,6 +1,7 @@
 name: Test Envirinment
-on : 
-  workflow_dispatch:
+on : [push]
+jobs:
+  test-environments:
     inputs:
       environment:
         description: 'Define env name'     
@@ -10,9 +11,6 @@ on :
         description: 'Define branch name'     
         required: true
         default: 'master'
-
-jobs:
-  test-environments:
     runs-on: ubuntu-latest
     environment: dev
     steps:
