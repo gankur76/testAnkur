@@ -1,0 +1,7 @@
+name: Test Envirinment
+on : [push]
+
+jobs:
+  test-environments:
+  runs-on: ubuntu-latest
+  run: echo "Hello "
