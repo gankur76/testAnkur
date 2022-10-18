@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: check environment variable
       env:
-        MY_SEC: 'HELLO'
+        MY_SEC: '${{ secrets.dev.MY_SEC }}'
       run: |
         echo $MY_SEC >> secrets.txt
         cat secrets.txt
