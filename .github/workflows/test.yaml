@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check environment variable
-      run: echo "Hello "
+      run: echo "Hello ${{ secrets.dev.MY_SEC }}"
